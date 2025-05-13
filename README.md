@@ -30,7 +30,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <img src="README/images/logo.png" alt="EventApp Logo" width="120" height="120">
+  <img src="logo.png" alt="EventApp Logo" width="120" height="120">
 </div>
 
 # 🎫 EventApp - Aplicación de Gestión de Eventos
