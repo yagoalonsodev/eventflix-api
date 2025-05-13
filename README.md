@@ -1,25 +1,24 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Gracias por revisar esta plantilla de README. Si tienes sugerencias para mejorarla, haz un fork del repositorio y crea un pull request o abre un issue con la etiqueta "enhancement".
-*** ¡No olvides darle una estrella al proyecto!
-*** ¡Gracias de nuevo! ¡Ahora ve y crea algo INCREÍBLE! :D
--->
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** Uso de enlaces de referencia en markdown para mayor legibilidad.
-*** Los enlaces de referencia están entre corchetes [ ] en vez de paréntesis ( ).
-*** Consulta la declaración de variables de referencia al final de este documento.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
-  <img src="logo.png" alt="EventApp Logo" width="120" height="120">
+  <img src="logo.png" alt="Eventflix Logo" width="120" height="120">
 </div>
-# 🎫 Eventflix  - Backend API
+
+# Eventflix — Backend API
+
+## Ecosistema Eventflix
+
+Plataforma full-stack de **gestión de eventos y venta de entradas**. Proyecto del ciclo **DAM** (La Salle Gràcia), desarrollado en equipo.
+
+| Repositorio | Rol | Stack |
+|-------------|-----|-------|
+| [**eventflix**](https://github.com/yagoalonsodev/eventflix) | Índice y arquitectura | — |
+| [**eventflix-api**](https://github.com/yagoalonsodev/eventflix-api) | Backend REST | Laravel 11, PHP, MySQL |
+| [**eventflix-web**](https://github.com/yagoalonsodev/eventflix-web) | Cliente web | Next.js, React 19 |
+| [**eventflix-android**](https://github.com/yagoalonsodev/eventflix-android) | App móvil | Kotlin, Jetpack Compose |
+
+
+> **Este repositorio:** API REST en Laravel 11 — autenticación, eventos, entradas, pagos y gestión de usuarios.
 
 ## 📋 Descripción General
 Este es el backend de una aplicación completa de gestión de eventos y venta de entradas, desarrollada con Laravel 11. Proporciona una API RESTful robusta y segura que permite la gestión integral de eventos, procesamiento de pagos, generación de documentación y gestión de usuarios.
