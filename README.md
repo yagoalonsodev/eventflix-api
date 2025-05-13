@@ -275,19 +275,12 @@ app/
 
 ### Medidas Implementadas
 - **Autenticación:**
-  - JWT con renovación automática
   - Almacenamiento seguro de tokens
-  - Biometric authentication
   
 - **Datos Sensibles:**
   - Encriptación AES-256
   - Secure SharedPreferences
   - ProGuard/R8 optimización
-  
-- **Red:**
-  - Certificate Pinning
-  - HTTPS obligatorio
-  - Validación de certificados
 
 ### Buenas Prácticas
 - Sanitización de inputs
@@ -299,7 +292,7 @@ app/
 
 ### Base URL
 ```
-https://api.eventapp.com/v1/
+https://127.0.0.1:8000
 ```
 
 ### Endpoints Principales
@@ -398,21 +391,13 @@ POST /tickets/{id}/transfer
 
 ## ✍️ Autores
 
-- **Yago Alonso** - *Frontend Developer* - [GitHub](https://github.com/tuusuario)
-  - Especializado en UI/UX y arquitectura
-  - Líder técnico del proyecto
-
-- **Arnau Gil** - *Frontend Developer* - [GitHub](https://github.com/tuusuario)
-  - Experto en integración de APIs
-  - Desarrollo de funcionalidades core
-
-- **Alex Vilanova** - *Frontend Developer* - [GitHub](https://github.com/tuusuario)
-  - Especialista en testing y seguridad
-  - Optimización de rendimiento
-
+- **Yago Alonso** - *FullStack Developer* - [GitHub](https://github.com/yagoalonso1)
+- **Arnau Gil** - *Frontend Developer* - [GitHub]([https://github.com/XxArnauGxX)
+- **Alex Vilanova** - *Frontend Developer* - [GitHub](https://github.com/avilanova25)
+- 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.txt](LICENSE.txt) para detalles
 
 ### Términos Principales
 - Uso comercial permitido
@@ -439,10 +424,6 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.m
 
 ## 📞 Soporte y Contacto
 
-### Canales de Soporte
-- Email: support@eventapp.com
-- Discord: [EventApp Community]
-- Twitter: @EventApp
 
 ### Reportar Problemas
 - Usar GitHub Issues
@@ -452,7 +433,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.m
 ---
 Desarrollado con ❤️ por Yago Alonso, Arnau Gil y Alex Vilanova
 
-[Última actualización: 2024]
+[Última actualización: 2025]
 
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
