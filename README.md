@@ -22,7 +22,7 @@
 # 🎫 Eventflix  - Backend API
 
 ## 📋 Descripción General
-Este es el backend de una aplicación completa de gestión de eventos y venta de entradas, desarrollada con Laravel 10. Proporciona una API RESTful robusta y segura que permite la gestión integral de eventos, procesamiento de pagos, generación de documentación y gestión de usuarios.
+Este es el backend de una aplicación completa de gestión de eventos y venta de entradas, desarrollada con Laravel 11. Proporciona una API RESTful robusta y segura que permite la gestión integral de eventos, procesamiento de pagos, generación de documentación y gestión de usuarios.
 
 ### 🎯 Objetivo del Proyecto
 Crear una plataforma completa que permita:
