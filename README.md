@@ -1,4 +1,25 @@
-# 🎫 Sistema de Gestión de Eventos - Backend API
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
+<!--
+*** Gracias por revisar esta plantilla de README. Si tienes sugerencias para mejorarla, haz un fork del repositorio y crea un pull request o abre un issue con la etiqueta "enhancement".
+*** ¡No olvides darle una estrella al proyecto!
+*** ¡Gracias de nuevo! ¡Ahora ve y crea algo INCREÍBLE! :D
+-->
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** Uso de enlaces de referencia en markdown para mayor legibilidad.
+*** Los enlaces de referencia están entre corchetes [ ] en vez de paréntesis ( ).
+*** Consulta la declaración de variables de referencia al final de este documento.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <img src="logo.png" alt="EventApp Logo" width="120" height="120">
+</div>
+# 🎫 Eventflix  - Backend API
 
 ## 📋 Descripción General
 Este es el backend de una aplicación completa de gestión de eventos y venta de entradas, desarrollada con Laravel 10. Proporciona una API RESTful robusta y segura que permite la gestión integral de eventos, procesamiento de pagos, generación de documentación y gestión de usuarios.
@@ -36,12 +57,6 @@ Crear una plataforma completa que permita:
 - Sistema anti-reventa
 - Cancelaciones y reembolsos
 
-### 💰 Sistema de Pagos
-- Integración con pasarelas de pago
-- Gestión de transacciones
-- Sistema de reembolsos
-- Registro de histórico de pagos
-- Facturación automática
 
 ### 📄 Generación de Documentos
 - Entradas en PDF personalizadas
@@ -53,16 +68,13 @@ Crear una plataforma completa que permita:
 ### 📧 Sistema de Notificaciones
 - Emails transaccionales
 - Confirmaciones de compra
-- Recordatorios de eventos
-- Notificaciones de cambios
-- Alertas de sistema
 
 ## 💻 Tecnologías y Herramientas
 
 ### 🛠️ Core
 - PHP 8.1
 - Laravel 10.x
-- MySQL/MariaDB
+- Supabase
 - Redis (caché y colas)
 - Nginx/Apache
 
@@ -280,10 +292,8 @@ app/
 - PHP >= 8.1
   - Extensiones: BCMath, Ctype, JSON, Mbstring, OpenSSL, PDO, Tokenizer, XML
 - Composer 2.x
-- MySQL/MariaDB >= 8.0
-- Redis (opcional, para caché)
+- Cuenta Supabase
 - Servidor web (Nginx/Apache)
-- SSL para producción
 
 ### 🔧 Proceso de Instalación
 
@@ -391,41 +401,6 @@ Authorization: Bearer <token>
 }
 ```
 
-## 🔐 Seguridad
-
-### 🛡️ Medidas Implementadas
-- Autenticación JWT con Sanctum
-- Protección CSRF
-- Rate Limiting
-- Validación de entrada
-- Sanitización de datos
-- Logs de seguridad
-- Encriptación de datos sensibles
-
-### ⚠️ Consideraciones de Seguridad
-- Todas las contraseñas se hashean
-- Datos sensibles encriptados
-- Sesiones seguras
-- Headers de seguridad configurados
-- Protección contra inyección SQL
-- Validación de archivos subidos
-
-## 🧪 Testing
-
-### 🔍 Tipos de Tests
-```bash
-# Ejecutar todos los tests
-php artisan test
-
-# Tests unitarios
-php artisan test --testsuite=Unit
-
-# Tests de integración
-php artisan test --testsuite=Feature
-
-# Tests específicos
-php artisan test --filter=EventTest
-```
 
 ## 👥 Equipo de Desarrollo
 
@@ -433,46 +408,23 @@ php artisan test --filter=EventTest
 - **Yago Alonso**
   - Rol: Lead Backend Developer
   - Responsabilidades: Arquitectura, API, Seguridad
-  - GitHub: [YagoAlonso](https://github.com/YagoAlonso)
+  - GitHub: [YagoAlonso](https://github.com/yagoalonso1)
 
 - **Arnau Gil**
   - Rol: Backend Developer
   - Responsabilidades: Testing, Integración, Base de datos
-  - GitHub: [ArnauGil](https://github.com/ArnauGil)
+  - GitHub: [ArnauGil](https://github.com/XxArnauGxX)
 
 - **Alex Vilanova**
   - Rol: Backend Developer
   - Responsabilidades: Documentación, Seguridad, API
-  - GitHub: [AlexVilanova](https://github.com/AlexVilanova)
+  - GitHub: [AlexVilanova](https://github.com/alexvilanova05)
 
-## 📈 Estado del Proyecto y Roadmap
 
-### 🎯 Versión Actual
-- Versión: 1.0.0
-- Estado: En desarrollo activo
-- Última actualización: Marzo 2024
-
-### 🛣️ Próximas Características
-- [ ] Integración con más proveedores de pago
-- [ ] Sistema de eventos recurrentes
-- [ ] API para aplicación móvil
-- [ ] Panel de administración mejorado
-- [ ] Sistema de análisis y estadísticas
-
-## 📞 Soporte y Contacto
-
-### 🆘 Soporte Técnico
-- Email: soporte@tudominio.com
-- Horario: Lunes a Viernes, 9:00 - 18:00 (CET)
-- Issues: GitHub Issues
-
-### 📱 Redes Sociales
-- Twitter: [@EventosApp](https://twitter.com/EventosApp)
-- LinkedIn: [EventosApp](https://linkedin.com/company/EventosApp)
 
 ## 📄 Licencia y Términos
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE.md](LICENSE.txt) para más detalles.
 
 ---
 Desarrollado con ❤️ por el equipo de EventosApp
