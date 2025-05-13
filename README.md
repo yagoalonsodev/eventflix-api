@@ -1,770 +1,478 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
+# 🎫 Sistema de Gestión de Eventos - Backend API
 
+## 📋 Descripción General
+Este es el backend de una aplicación completa de gestión de eventos y venta de entradas, desarrollada con Laravel 10. Proporciona una API RESTful robusta y segura que permite la gestión integral de eventos, procesamiento de pagos, generación de documentación y gestión de usuarios.
 
+### 🎯 Objetivo del Proyecto
+Crear una plataforma completa que permita:
+- A los organizadores gestionar sus eventos de manera eficiente
+- A los participantes comprar entradas de forma segura
+- Automatizar la generación y envío de documentación
+- Proporcionar una experiencia de usuario fluida y segura
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-<!-- FUTURES
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]-->
+## 🚀 Características Detalladas
 
+### 👥 Gestión de Usuarios
+- Sistema de roles (Organizador, Participante, Administrador)
+- Registro y autenticación seguros
+- Perfiles personalizables
+- Recuperación de contraseña
+- Autenticación con Google (OAuth2)
 
+### 📅 Gestión de Eventos
+- CRUD completo de eventos
+- Gestión de tipos de entradas
+- Control de aforo
+- Gestión de fechas y horarios
+- Ubicación con integración de mapas
+- Sistema de categorías y etiquetas
+- Búsqueda y filtrado avanzado
 
+### 🎟️ Sistema de Entradas
+- Múltiples tipos de entradas por evento
+- Control de stock en tiempo real
+- Generación de códigos únicos
+- Códigos QR para validación
+- Sistema anti-reventa
+- Cancelaciones y reembolsos
 
+### 💰 Sistema de Pagos
+- Integración con pasarelas de pago
+- Gestión de transacciones
+- Sistema de reembolsos
+- Registro de histórico de pagos
+- Facturación automática
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <img src="logo.png" alt="EventApp Logo" width="120" height="120">
-</div>
+### 📄 Generación de Documentos
+- Entradas en PDF personalizadas
+- Facturas según normativa
+- Códigos QR únicos
+- Envío automático por email
+- Validación en tiempo real
 
-# 🎫 EventApp - Aplicación de Gestión de Eventos
+### 📧 Sistema de Notificaciones
+- Emails transaccionales
+- Confirmaciones de compra
+- Recordatorios de eventos
+- Notificaciones de cambios
+- Alertas de sistema
 
-## 📱 Sobre el Proyecto
+## 💻 Tecnologías y Herramientas
 
-EventApp es una aplicación móvil moderna desarrollada en Kotlin con Jetpack Compose que permite a los usuarios gestionar, comprar y organizar eventos de manera intuitiva y eficiente. La aplicación ofrece una experiencia de usuario fluida y moderna, siguiendo las últimas tendencias en diseño de Material Design 3.
+### 🛠️ Core
+- PHP 8.1
+- Laravel 10.x
+- MySQL/MariaDB
+- Redis (caché y colas)
+- Nginx/Apache
 
-### 🎯 Objetivos del Proyecto
-
-- Proporcionar una plataforma intuitiva para la gestión de eventos
-- Facilitar la compra y venta de entradas de manera segura
-- Ofrecer herramientas avanzadas para organizadores de eventos
-- Mejorar la experiencia del usuario en eventos presenciales y virtuales
-- Integrar funcionalidades sociales para compartir y descubrir eventos
-
-### 🌟 Características Principales
-
-#### 👤 Para Participantes:
-- **Exploración de Eventos:**
-  - Búsqueda avanzada con filtros
-  - Categorización por tipo, fecha y ubicación
-  - Vista de mapa interactivo
-  - Recomendaciones personalizadas
-
-- **Gestión de Entradas:**
-  - Proceso de compra seguro con múltiples métodos de pago
-  - Generación de entradas en PDF con códigos QR
-  - Sistema de reembolsos automatizado
-  - Transferencia de entradas entre usuarios
-
-- **Funcionalidades Personales:**
-  - Perfil personalizado con historial de eventos
-  - Sistema de valoraciones y reseñas
-  - Lista de deseos y favoritos
-  - Notificaciones personalizadas
-  - Integración con calendario del dispositivo
-
-- **Características Sociales:**
-  - Compartir eventos en redes sociales
-  - Crear grupos de asistentes
-  - Chat integrado para grupos de eventos
-  - Sistema de seguimiento de organizadores
-
-#### 🎭 Para Organizadores:
-- **Gestión de Eventos:**
-  - Panel de control completo
-  - Creación de eventos con plantillas
-  - Gestión de múltiples tipos de entradas
-  - Configuración de precios dinámicos
-  - Sistema de códigos promocionales
-
-- **Herramientas de Marketing:**
-  - Análisis de datos y estadísticas
-  - Informes de ventas en tiempo real
-  - Herramientas de email marketing
-  - Gestión de redes sociales
-
-- **Gestión de Asistentes:**
-  - Control de acceso mediante QR
-  - Gestión de lista de espera
-  - Sistema de acreditaciones
-  - Comunicación masiva con asistentes
-
-### 🛠️ Tecnologías Utilizadas
-
-#### Frontend
-- **UI/UX:**
-  - Jetpack Compose (última versión)
-  - Material Design 3
-  - Animaciones personalizadas
-  - Temas dinámicos y modo oscuro
-
-- **Arquitectura:**
-  - MVVM (Model-View-ViewModel)
-  - Clean Architecture
-  - Repository Pattern
-  - Use Cases
-
-#### Backend y Servicios
-- **API y Networking:**
-  - REST API con Laravel
-  - GraphQL para consultas complejas
-  - WebSockets para tiempo real
-  - Cache con Redis
-
-- **Almacenamiento:**
-  - Room Database
-  - SharedPreferences
-  - Firebase Cloud Storage
-  - SQLite local
-
-#### Seguridad
-- **Autenticación:**
-  - JWT (JSON Web Tokens)
-  - OAuth 2.0
-  - Biometric Authentication
-  - Google Sign-In
-
-#### Integraciones
-- **APIs Externas:**
-  - Google Maps Platform
-  - Stripe Payments
-  - Firebase Analytics
-  - Google Calendar API
-
-### 📚 Bibliotecas Principales
-
-```kotlin
-dependencies {
-    // Jetpack Compose
-    implementation("androidx.compose.ui:ui:1.5.4")
-    implementation("androidx.compose.material3:material3:1.1.2")
-    implementation("androidx.compose.runtime:runtime:1.5.4")
-    implementation("androidx.compose.foundation:foundation:1.5.4")
-    
-    // Navegación
-    implementation("androidx.navigation:navigation-compose:2.7.5")
-    implementation("androidx.navigation:navigation-runtime-ktx:2.7.5")
-    
-    // Lifecycle y ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
-    
-    // Networking
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
-    
-    // Inyección de Dependencias
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-compiler:2.48")
-    
-    // Imágenes y Multimedia
-    implementation("io.coil-kt:coil-compose:2.5.0")
-    implementation("com.github.bumptech.glide:compose:1.0.0-alpha.5")
-    
-    // Almacenamiento
-    implementation("androidx.room:room-runtime:2.6.0")
-    implementation("androidx.room:room-ktx:2.6.0")
-    kapt("androidx.room:room-compiler:2.6.0")
-    
-    // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
-    implementation("com.google.firebase:firebase-analytics-ktx")
-    implementation("com.google.firebase:firebase-messaging-ktx")
-    
-    // Testing
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.5.4")
+### 📚 Principales Paquetes
+```json
+{
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.0",
+        "laravel/sanctum": "^3.2",
+        "barryvdh/laravel-dompdf": "^2.0",
+        "simplesoftwareio/simple-qrcode": "^4.2",
+        "guzzlehttp/guzzle": "^7.5",
+        "predis/predis": "^2.0"
+    }
 }
 ```
 
-## 🚀 Instalación y Configuración
+## 🐳 Guía de Despliegue con Docker (Aún no desplegado)
 
 ### Requisitos Previos
-- Android Studio Hedgehog | 2023.1.1 o superior
-- JDK 17 o superior
-- Kotlin 1.9.0 o superior
-- Gradle 8.0 o superior
+- Docker Engine 24.0.0 o superior
+- Docker Compose 2.20.0 o superior
+- Git
+- Cuenta en Supabase (para la base de datos)
 
-### Pasos de Instalación
+### Pasos de Despliegue
 
 1. **Clonar el Repositorio:**
    ```bash
-   git clone https://github.com/tuusuario/eventapp.git
-   cd eventapp
+   git clone https://github.com/LaSalleGracia-Projectes/projecte-aplicaci-web-servidor-g6richardstallman.git
+   cd projecte-aplicaci-web-servidor-g6richardstallman
    ```
 
 2. **Configurar Variables de Entorno:**
-   Crea un archivo `local.properties` en la raíz del proyecto:
-   ```properties
-   sdk.dir=TU_RUTA_SDK_ANDROID
-   BASE_URL="TU_URL_API"
-   MAPS_API_KEY="TU_CLAVE_API_GOOGLE_MAPS"
-   STRIPE_PUBLIC_KEY="TU_CLAVE_PUBLICA_STRIPE"
-   FIREBASE_APP_ID="TU_APP_ID_FIREBASE"
+   Crea un archivo `.env` en la raíz del proyecto:
+   ```env
+   # Configuración de la aplicación
+   APP_NAME="Sistema de Eventos"
+   APP_ENV=production
+   APP_DEBUG=false
+   APP_URL=https://tu-dominio.com
+
+   # Supabase (Base de datos)
+   DB_CONNECTION=pgsql
+   DB_HOST=db.example.supabase.co
+   DB_PORT=5432
+   DB_DATABASE=postgres
+   DB_USERNAME=postgres
+   DB_PASSWORD=ejemplo_password
+
+   # Redis
+   REDIS_HOST=redis
+   REDIS_PASSWORD=null
+   REDIS_PORT=6379
+
+   # Correo
+   MAIL_MAILER=smtp
+   MAIL_HOST=smtp.tuservidor.com
+   MAIL_PORT=587
+   MAIL_USERNAME=tu@email.com
+   MAIL_PASSWORD=tu_contraseña
+   MAIL_ENCRYPTION=tls
+   MAIL_FROM_ADDRESS=noreply@tudominio.com
+   MAIL_FROM_NAME="${APP_NAME}"
    ```
 
-3. **Configurar Firebase:**
-   - Descarga el archivo `google-services.json`
-   - Colócalo en la carpeta `app/`
-
-4. **Sincronizar y Compilar:**
+3. **Construir y Levantar los Contenedores:**
    ```bash
-   ./gradlew clean build
+   docker-compose up -d --build
    ```
 
-### Configuración del Entorno de Desarrollo
-
-1. **Android Studio:**
-   - Instalar plugins recomendados
-   - Configurar el emulador o dispositivo físico
-   - Verificar la configuración de Gradle
-
-2. **Configuración de Git:**
+4. **Ejecutar Migraciones y Seeders:**
    ```bash
-   git config user.name "Tu Nombre"
-   git config user.email "tu@email.com"
+   docker-compose exec app php artisan migrate --seed --force
    ```
 
-## 🏗️ Arquitectura
+5. **Optimizar la Aplicación:**
+   ```bash
+   docker-compose exec app php artisan config:cache
+   docker-compose exec app php artisan route:cache
+   docker-compose exec app php artisan view:cache
+   ```
 
-### Estructura del Proyecto
+### Estructura de Docker
+
+El proyecto utiliza los siguientes servicios en Docker:
+
+```yaml
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eventos-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - eventos-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: eventos-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d/
+    networks:
+      - eventos-network
+
+  redis:
+    image: redis:alpine
+    container_name: eventos-redis
+    restart: unless-stopped
+    networks:
+      - eventos-network
+
+networks:
+  eventos-network:
+    driver: bridge
+```
+
+### Dockerfile
+
+```dockerfile
+FROM php:8.1-fpm
+
+# Argumentos definidos en docker-compose.yml
+ARG user
+ARG uid
+
+# Instalar dependencias del sistema
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    zip \
+    unzip
+
+# Limpiar cache
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Instalar extensiones PHP
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+
+# Obtener Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# Crear usuario del sistema
+RUN useradd -G www-data,root -u $uid -d /home/$user $user
+RUN mkdir -p /home/$user/.composer && \
+    chown -R $user:$user /home/$user
+
+# Establecer directorio de trabajo
+WORKDIR /var/www
+
+USER $user
+```
+
+### Comandos Útiles
+
+```bash
+# Ver logs de los contenedores
+docker-compose logs -f
+
+# Reiniciar un servicio específico
+docker-compose restart app
+
+# Detener todos los contenedores
+docker-compose down
+
+# Eliminar volúmenes (¡cuidado, esto borrará los datos!)
+docker-compose down -v
+```
+## 🏗️ Arquitectura del Sistema
+
+### 📂 Estructura de Directorios
 ```
 app/
-├── api/                 # Servicios de red y modelos de API
-│   ├── interceptors/    # Interceptores de red
-│   ├── models/          # Modelos de datos API
-│   └── services/        # Interfaces de servicios
-├── di/                  # Módulos de inyección de dependencias
-│   ├── modules/         # Módulos Hilt
-│   └── qualifiers/      # Calificadores personalizados
-├── domain/             # Lógica de negocio
-│   ├── models/          # Modelos de dominio
-│   ├── repositories/    # Interfaces de repositorio
-│   └── usecases/       # Casos de uso
-├── data/              # Implementación de datos
-│   ├── local/          # Fuentes de datos locales
-│   ├── remote/         # Fuentes de datos remotas
-│   └── repositories/   # Implementaciones de repositorio
-├── ui/
-│   ├── components/     # Componentes reutilizables
-│   ├── screens/        # Pantallas de la aplicación
-│   ├── theme/          # Temas y estilos
-│   └── navigation/     # Navegación
-├── util/              # Utilidades y extensiones
-└── viewmodel/         # ViewModels
+├── Http/
+│   ├── Controllers/
+│   │   ├── Api/
+│   │   └── Auth/
+│   ├── Middleware/
+│   └── Requests/
+├── Models/
+├── Services/
+├── Repositories/
+├── Mail/
+├── Events/
+├── Listeners/
+└── Jobs/
 ```
 
-### Patrones de Diseño Implementados
-- **MVVM (Model-View-ViewModel)**
-- **Repository Pattern**
-- **Factory Pattern**
-- **Dependency Injection**
-- **Observer Pattern**
-- **Builder Pattern**
+### 🔄 Flujo de Datos
+1. Request HTTP → Middleware
+2. Middleware → Controller
+3. Controller → Service
+4. Service → Repository
+5. Repository → Model
+6. Response → Cliente
+
+## 📦 Instalación y Configuración
+
+### 📋 Requisitos Previos Detallados
+- PHP >= 8.1
+  - Extensiones: BCMath, Ctype, JSON, Mbstring, OpenSSL, PDO, Tokenizer, XML
+- Composer 2.x
+- MySQL/MariaDB >= 8.0
+- Redis (opcional, para caché)
+- Servidor web (Nginx/Apache)
+- SSL para producción
+
+### 🔧 Proceso de Instalación
+
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/tuorganizacion/eventos-backend.git
+cd eventos-backend
+```
+
+2. Instalar dependencias:
+```bash
+composer install --optimize-autoloader --no-dev
+```
+
+3. Configuración del entorno:
+```bash
+cp .env.example .env
+php artisan key:generate
+php artisan storage:link
+```
+
+4. Configuración detallada del .env:
+```env
+# Configuración de la aplicación
+APP_NAME="Sistema de Eventos"
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=https://tu-dominio.com
+
+# Base de datos
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=eventos_db
+DB_USERNAME=usuario
+DB_PASSWORD=contraseña
+
+# Redis
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+# Correo
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.tuservidor.com
+MAIL_PORT=587
+MAIL_USERNAME=tu@email.com
+MAIL_PASSWORD=tu_contraseña
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=noreply@tudominio.com
+MAIL_FROM_NAME="${APP_NAME}"
+
+# JWT y Seguridad
+JWT_SECRET=tu_jwt_secret
+JWT_TTL=60
+SANCTUM_STATEFUL_DOMAINS=tu-dominio.com
+```
+
+5. Preparar la base de datos:
+```bash
+php artisan migrate --seed --force
+```
+
+6. Optimizar:
+```bash
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+```
+
+## 📚 API Documentation
+
+### 🔐 Autenticación
+Todas las rutas (excepto login/registro) requieren token Bearer:
+```http
+Authorization: Bearer <tu_token>
+```
+
+### 📝 Ejemplos de Endpoints
+
+#### Autenticación
+```http
+POST /api/auth/login
+Content-Type: application/json
+
+{
+    "email": "usuario@email.com",
+    "password": "contraseña"
+}
+```
+
+#### Crear Evento
+```http
+POST /api/eventos
+Content-Type: application/json
+Authorization: Bearer <token>
+
+{
+    "nombre": "Mi Evento",
+    "descripcion": "Descripción del evento",
+    "fecha": "2024-12-31",
+    "hora": "20:00",
+    "ubicacion": "Dirección del evento",
+    "aforo_maximo": 100
+}
+```
 
 ## 🔐 Seguridad
 
-### Medidas Implementadas
-- **Autenticación:**
-  - Almacenamiento seguro de tokens
-  
-- **Datos Sensibles:**
-  - Encriptación AES-256
-  - Secure SharedPreferences
-  - ProGuard/R8 optimización
+### 🛡️ Medidas Implementadas
+- Autenticación JWT con Sanctum
+- Protección CSRF
+- Rate Limiting
+- Validación de entrada
+- Sanitización de datos
+- Logs de seguridad
+- Encriptación de datos sensibles
 
-### Buenas Prácticas
-- Sanitización de inputs
-- Prevención de inyección SQL
-- Rate limiting
-- Logging seguro
+### ⚠️ Consideraciones de Seguridad
+- Todas las contraseñas se hashean
+- Datos sensibles encriptados
+- Sesiones seguras
+- Headers de seguridad configurados
+- Protección contra inyección SQL
+- Validación de archivos subidos
 
-## 🌐 API y Endpoints
+## 🧪 Testing
 
-### Base URL
-```
-https://127.0.0.1:8000
-```
+### 🔍 Tipos de Tests
+```bash
+# Ejecutar todos los tests
+php artisan test
 
-### Endpoints Principales
+# Tests unitarios
+php artisan test --testsuite=Unit
 
-#### Autenticación
-```
-POST /auth/login
-POST /auth/register
-POST /auth/refresh
-POST /auth/logout
-```
+# Tests de integración
+php artisan test --testsuite=Feature
 
-#### Eventos
-```
-GET /events
-POST /events
-GET /events/{id}
-PUT /events/{id}
-DELETE /events/{id}
+# Tests específicos
+php artisan test --filter=EventTest
 ```
 
-#### Entradas
-```
-GET /tickets
-POST /tickets/purchase
-GET /tickets/{id}
-POST /tickets/{id}/transfer
-```
+## 👥 Equipo de Desarrollo
 
-## 📱 Capturas de Pantalla y Diseño
+### 🧑‍💻 Desarrolladores Principales
+- **Yago Alonso**
+  - Rol: Lead Backend Developer
+  - Responsabilidades: Arquitectura, API, Seguridad
+  - GitHub: [YagoAlonso](https://github.com/YagoAlonso)
 
-### Pantallas Principales
-[Aquí se incluirían las capturas de pantalla organizadas por sección]
+- **Arnau Gil**
+  - Rol: Backend Developer
+  - Responsabilidades: Testing, Integración, Base de datos
+  - GitHub: [ArnauGil](https://github.com/ArnauGil)
 
-### Guía de Estilos
-- **Colores:**
-  - Primary: #FF5722
-  - Secondary: #2196F3
-  - Background: #FFFFFF
-  - Surface: #F5F5F5
-  
-- **Tipografía:**
-  - Familia: Roboto
-  - Tamaños: 12sp - 24sp
-  
-- **Espaciado:**
-  - Padding: 8dp - 24dp
-  - Márgenes: 16dp - 32dp
+- **Alex Vilanova**
+  - Rol: Backend Developer
+  - Responsabilidades: Documentación, Seguridad, API
+  - GitHub: [AlexVilanova](https://github.com/AlexVilanova)
 
-## 🤝 Contribución
+## 📈 Estado del Proyecto y Roadmap
 
-### Proceso de Contribución
-1. Fork del repositorio
-2. Crear rama feature (`git checkout -b feature/NuevaCaracteristica`)
-3. Commit cambios (`git commit -m 'Añadir nueva característica'`)
-4. Push a la rama (`git push origin feature/NuevaCaracteristica`)
-5. Crear Pull Request
+### 🎯 Versión Actual
+- Versión: 1.0.0
+- Estado: En desarrollo activo
+- Última actualización: Marzo 2024
 
-### Guías de Contribución
-- Seguir convenciones de código
-- Documentar cambios
-- Añadir tests unitarios
-- Mantener compatibilidad
-
-### Flujo de Trabajo Git
-- Main: Producción
-- Develop: Desarrollo
-- Feature/*: Nuevas características
-- Hotfix/*: Correcciones urgentes
-
-## ✅ Testing
-
-### Tipos de Tests
-- **Unitarios:** JUnit, Mockito
-- **Integración:** Espresso
-- **UI:** Compose Testing
-- **End-to-End:** Maestro
-
-### Cobertura de Código
-- Mínimo 80% en lógica de negocio
-- Reportes automáticos en CI/CD
-
-## 📈 Análisis y Monitoreo
-
-### Herramientas
-- Firebase Analytics
-- Crashlytics
-- Performance Monitoring
-- Google Analytics
-
-### Métricas Principales
-- Tiempo de inicio
-- Tasa de errores
-- Uso de memoria
-- Rendimiento de red
-
-## ✍️ Autores
-
-- **Yago Alonso** - *FullStack Developer* - [GitHub](https://github.com/yagoalonso1)
-- **Arnau Gil** - *Frontend Developer* - [GitHub]([https://github.com/XxArnauGxX)
-- **Alex Vilanova** - *Frontend Developer* - [GitHub](https://github.com/avilanova25)
-- 
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.txt](LICENSE.txt) para detalles
-
-### Términos Principales
-- Uso comercial permitido
-- Modificación permitida
-- Distribución permitida
-- Uso privado permitido
-
-## 🙏 Agradecimientos
-
-- **Frameworks y Librerías:**
-  - Material Design por la guía de diseño
-  - JetBrains por Android Studio
-  - Google por Jetpack Compose
-  
-- **Recursos:**
-  - Icons8 por los iconos
-  - Unsplash por las imágenes
-  - Firebase por la infraestructura
-
-- **Comunidad:**
-  - Contribuidores de código abierto
-  - Beta testers
-  - Usuarios iniciales
+### 🛣️ Próximas Características
+- [ ] Integración con más proveedores de pago
+- [ ] Sistema de eventos recurrentes
+- [ ] API para aplicación móvil
+- [ ] Panel de administración mejorado
+- [ ] Sistema de análisis y estadísticas
 
 ## 📞 Soporte y Contacto
 
+### 🆘 Soporte Técnico
+- Email: soporte@tudominio.com
+- Horario: Lunes a Viernes, 9:00 - 18:00 (CET)
+- Issues: GitHub Issues
 
-### Reportar Problemas
-- Usar GitHub Issues
-- Incluir logs y pasos de reproducción
-- Adjuntar capturas de pantalla
+### 📱 Redes Sociales
+- Twitter: [@EventosApp](https://twitter.com/EventosApp)
+- LinkedIn: [EventosApp](https://linkedin.com/company/EventosApp)
+
+## 📄 Licencia y Términos
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
 
 ---
-Desarrollado con ❤️ por Yago Alonso, Arnau Gil y Alex Vilanova
-
-[Última actualización: 2025]
-
-[![Contributors][contributors-shield]][contributors-url]
-[![MIT License][license-shield]][license-url]
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#deployment">Deployment</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#test">Test</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Describe de repo content in 3-5 lines
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Contributors
-[![Contributors][contributors-shield]][contributors-url]
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-### Built With
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-
-<!-- See: https://github.com/alexandresanlim/Badges4-README.md-Profile?tab=readme-ov-file#-terminal -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-Requirements for the software and other tools to build, test and push 
-- [Example 1](https://www.example.com)
-- [Example 2](https://www.example.com)
-
-
-### Installation
-
-1. Create directory
-   ```sh
-   mkdir project-dir
-   ```
-2. Get a free API Key at [https://example.com](https://example.com)
-3. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-4. Install NPM packages
-   ```sh
-   npm install
-   ```
-5. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-### Deployment
-
-#### Despliegue del Backend (Laravel 11)
-
-1. **Clona el repositorio backend:**
-   ```bash
-   git clone https://github.com/LaSalleGracia-Projectes/projecte-aplicaci-web-servidor-g6richardstallman.git
-   cd projecte-aplicaci-web-servidor-g6richardstallman
-   ```
-2. **Instala dependencias:**
-   ```bash
-   composer install --optimize-autoloader --no-dev
-   ```
-3. **Configura el entorno:**
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   php artisan storage:link
-   ```
-   * Edita `.env` con los datos de tu base de datos, correo, claves JWT, etc.
-4. **Prepara la base de datos:**
-   ```bash
-   php artisan migrate --seed --force
-   ```
-5. **Optimiza la configuración:**
-   ```bash
-   php artisan config:cache
-   php artisan route:cache
-   php artisan view:cache
-   ```
-6. **Arranca el servidor:**
-   ```bash
-   php artisan serve
-   ```
-   O configura Nginx/Apache para producción.
-
-#### Despliegue del Frontend (App Android)
-
-1. **Clona este repositorio:**
-   ```bash
-   git clone https://github.com/tuusuario/eventapp.git
-   cd eventapp
-   ```
-2. **Configura variables de entorno:**
-   Crea o edita `local.properties`:
-   ```
-   sdk.dir=TU_RUTA_SDK_ANDROID
-   BASE_URL="https://TU_BACKEND_URL/api"
-   MAPS_API_KEY="TU_CLAVE_API_GOOGLE_MAPS"
-   STRIPE_PUBLIC_KEY="TU_CLAVE_PUBLICA_STRIPE"
-   FIREBASE_APP_ID="TU_APP_ID_FIREBASE"
-   ```
-3. **Configura Firebase:**
-   Descarga `google-services.json` y colócalo en la carpeta `app/`.
-4. **Abre el proyecto en Android Studio.**
-5. **Sincroniza y compila:**
-   ```bash
-   ./gradlew clean build
-   ```
-6. **Ejecuta la app:**
-   * Conecta un dispositivo o inicia un emulador.
-   * Haz clic en "Run" en Android Studio.
-7. **Despliegue en producción:**
-   * Genera el APK o App Bundle (Build > Generate Signed Bundle/APK).
-   * Firma la app y distribúyela (Google Play o interno).
-
-#### Integración Frontend-Backend
-* La app consume endpoints REST protegidos con JWT/Sanctum.
-* Configura correctamente CORS y dominios en el backend.
-* Asegúrate de que la URL base de la API esté bien configurada en la app.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-For more examples, please refer to the [Documentation](https://example.com) <!--Link to Memory PDF --> or see de video [Video](https://example.com)<!--Link to Video PDF -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## Test
-
-### Testing Frontend
-* Ejecuta tests instrumentados desde Android Studio.
-* Usa emuladores y dispositivos reales para pruebas de UI y rendimiento.
-
-### Testing Backend
-Run the artisant tests
-   ```php
-   php artisan test
-   ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [X] Feature 1
-- [ ] Feature 2
-- [X] Feature 3
-    - [X] Nested Feature
-
-<!-- See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues). -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-<!-- LICENSE -->
-## License
-
-[![MIT License][license-shield]][license-url]
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. 
-* [Choose an Open Source License](https://choosealicense.com)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [Laravel](https://laravel.com/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-
-# 🚀 Guía de Despliegue
-
-## Despliegue del Backend (Laravel 11)
-
-1. **Clona el repositorio backend:**
-   ```bash
-   git clone https://github.com/LaSalleGracia-Projectes/projecte-aplicaci-web-servidor-g6richardstallman.git
-   cd projecte-aplicaci-web-servidor-g6richardstallman
-   ```
-2. **Instala dependencias:**
-   ```bash
-   composer install --optimize-autoloader --no-dev
-   ```
-3. **Configura el entorno:**
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   php artisan storage:link
-   ```
-   * Edita `.env` con los datos de tu base de datos, correo, claves JWT, etc.
-4. **Prepara la base de datos:**
-   ```bash
-   php artisan migrate --seed --force
-   ```
-5. **Optimiza la configuración:**
-   ```bash
-   php artisan config:cache
-   php artisan route:cache
-   php artisan view:cache
-   ```
-6. **Arranca el servidor:**
-   ```bash
-   php artisan serve
-   ```
-   O configura Nginx/Apache para producción.
-
----
-
-## Despliegue del Frontend (App Android)
-
-1. **Clona este repositorio:**
-   ```bash
-   git clone https://github.com/tuusuario/eventapp.git
-   cd eventapp
-   ```
-2. **Configura variables de entorno:**
-   Crea o edita `local.properties`:
-   ```
-   sdk.dir=TU_RUTA_SDK_ANDROID
-   BASE_URL="https://TU_BACKEND_URL/api"
-   MAPS_API_KEY="TU_CLAVE_API_GOOGLE_MAPS"
-   STRIPE_PUBLIC_KEY="TU_CLAVE_PUBLICA_STRIPE"
-   FIREBASE_APP_ID="TU_APP_ID_FIREBASE"
-   ```
-3. **Configura Firebase:**
-   Descarga `google-services.json` y colócalo en la carpeta `app/`.
-4. **Abre el proyecto en Android Studio.**
-5. **Sincroniza y compila:**
-   ```bash
-   ./gradlew clean build
-   ```
-6. **Ejecuta la app:**
-   * Conecta un dispositivo o inicia un emulador.
-   * Haz clic en "Run" en Android Studio.
-7. **Despliegue en producción:**
-   * Genera el APK o App Bundle (Build > Generate Signed Bundle/APK).
-   * Firma la app y distribúyela (Google Play o interno).
-
----
-
-## 🧩 Integración Frontend-Backend
-* La app consume endpoints REST protegidos con JWT/Sanctum.
-* Configura correctamente CORS y dominios en el backend.
-* Asegúrate de que la URL base de la API esté bien configurada en la app.
-
----
-
-## 🧪 Testing
-* **Frontend:**
-  * Ejecuta tests instrumentados desde Android Studio.
-  * Usa emuladores y dispositivos reales para pruebas de UI y rendimiento.
-* **Backend:**
-  * Ejecuta tests con `php artisan test`.
-
+Desarrollado con ❤️ por el equipo de EventosApp
