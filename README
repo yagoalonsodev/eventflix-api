@@ -1,0 +1,5 @@
+<script>start("/Users/yagoalonso/Documents/DAM/Projecte Versio Antiga/frontend/README/");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("images","images",1,128,"128 B",1747128894,"13/5/25, 11:34:54");</script>
+<script>addRow("LICENSE.txt","LICENSE.txt",0,1086,"1.1 kB",1747128327,"13/5/25, 11:25:27");</script>
+<script>addRow("README.md","README.md",0,2135,"2.1 kB",1747130124,"13/5/25, 11:55:24");</script>
