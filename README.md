@@ -104,7 +104,7 @@ Crear una plataforma completa que permita:
 
 1. **Clonar el Repositorio:**
    ```bash
-   git clone https://github.com/LaSalleGracia-Projectes/projecte-aplicaci-web-servidor-g6richardstallman.git
+   git clone https://github.com/yagoalonsodev/eventflix-api.git
    cd projecte-aplicaci-web-servidor-g6richardstallman
    ```
 
